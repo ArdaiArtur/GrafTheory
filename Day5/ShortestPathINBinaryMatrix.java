@@ -27,13 +27,15 @@ public class ShortestPathINBinaryMatrix {
                 bfs.add(new int[]{pk[0],pk[1]-1});
                 grid[pk[0]][pk[1]]=1;
                  }
-                 if(grid[grid.length-1][grid[0].length-1]==0)
+                 
                  bfs.clear();
+                 if(grid[grid.length-1][grid[0].length-1]==1)
+                  break;
                   
             }
             max++;
 
         }
-        return grid[grid.length-1][grid[0].length-1]==0?-1: max-1;
+        return grid[grid.length-1][grid[0].length-1]==0?-1: max;
     }
 }
